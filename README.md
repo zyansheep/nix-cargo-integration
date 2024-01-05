@@ -45,10 +45,10 @@ and then inside the `mkFlake`:
 
 ## Tips and tricks
 
-### Ignoring `Cargo.lock` in Rust libraries
+### Ignoring `Cargo.lock` in Older Rust libraries
 
 The [official recommendation](https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html)
-for Rust libraries is to add `Cargo.lock` to the `.gitignore`. This conflicts
+for Rust libraries *used to* say to add `Cargo.lock` to the `.gitignore`. This is now no longer the case, but some older projects may still do this and it conflicts
 with the way paths are evaluated when using a `flake.nix`. Only files tracked
 by the version control system (i.e. git) can be accessed during evaluation.
 This will manifest in the following warning:
